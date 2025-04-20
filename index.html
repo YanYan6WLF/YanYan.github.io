@@ -21,22 +21,26 @@
 
       line-height: 1.6;
     }
+
+
     nav {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
         padding: 1rem 2rem;
         border-bottom: 1px solid #eee;
         font-weight: 500;
+        gap: 3rem;
       }
       .nav-brand {
-        font-size: 1.8rem;
+        font-size: 1.1rem;
         font-weight: bold;
         color: #222;
+        flex-shrink: 0;
       }
       .nav-links {
         display: flex;
-        gap: 2rem;
+        gap: 2.5rem;
       }
       .nav-links a {
         text-decoration: none;
@@ -45,10 +49,7 @@
       .nav-links a:hover {
         color: #0077cc;
       }
-
-
-
-    
+        
 
     main {
       display: flex;
