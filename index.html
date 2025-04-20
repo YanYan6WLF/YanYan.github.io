@@ -5,7 +5,12 @@
   <title>Welcome to  Yan`s Site</title>
   <!--icon favicon-->
   <link rel="icon" type="image/jpg" href="favicon.jpg">
-
+  <style>
+      table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  </style>
    <style>
     /* 只针对 class 为 special-link 的链接设置样式 */
     a.special-link:link {
@@ -176,7 +181,40 @@ body {
   <source media="(min-width: 465px)" srcset="img_car.jpg">
   <img src="img_girl.jpg">
 </picture>
-
+<br>
+  <h1>The thead, tbody, and tfoot elements</h1>
+<table>
+  <colgroup>
+    <col span="2" style="background-color:white">
+    <col style="background-color:yellow">
+</colgroup>
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Savings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>January</td>
+      <td>$100</td>
+    </tr>
+    <tr>
+      <td>February</td>
+      <td>$80</td>
+    </tr>
+     <tr>
+      <td>February</td>
+      <td>$80</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Sum</td>
+      <td>$180</td>
+    </tr>
+  </tfoot>
+</table>
 </body>
 </html>
 
