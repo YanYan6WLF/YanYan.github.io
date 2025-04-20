@@ -1,96 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yan Yan |Welcom to my website😊!</title>
+  <title>Yan Yan | Welcome to my website 😊!</title>
   <link rel="icon" type="image/jpg" href="favicon.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  
   <style>
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
-      padding: 1.5rem;
       background: #fff;
       color: #333;
       transition: background-color 0.3s ease, color 0.3s ease;
-
       line-height: 1.6;
     }
 
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
     nav {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #eee;
-    font-weight: 500;
-    gap: 4rem;
-  }
-  .nav-brand {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #333;
-  }
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-  }
-  .nav-links a {
-    text-decoration: none;
-    color: #333;
-  }
-  .nav-links a:visited,
-  .nav-links a:active {
-    color: #333;
-  }
-  .nav-links a:hover {
-    text-decoration: underline;
-  }
-    
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid #eee;
+      font-weight: 500;
+      gap: 4rem;
+    }
+
+    .nav-brand {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
     main {
       display: flex;
-      max-width: 1200px;
-      margin: auto;
-      padding: 3rem 1.5rem;
+      padding: 3rem 0;
     }
+
     aside {
       flex: 0 0 250px;
       margin-right: 2rem;
     }
+
     aside img {
       width: 100%;
       border-radius: 8px;
       margin-bottom: 1rem;
     }
+
     aside h2 {
       font-size: 1.2em;
       margin: 0.5rem 0;
     }
+
     aside p, aside a {
       font-size: 0.95em;
       color: #666;
     }
+
     aside a {
       display: block;
       margin-bottom: 0.5rem;
       text-decoration: none;
     }
+
     section {
       flex: 1;
       margin-bottom: 3rem;
     }
+
     h2 {
       font-size: 1.5em;
       margin-bottom: 0.5rem;
     }
+
     ul {
       padding-left: 1.2rem;
     }
+
     footer {
       text-align: center;
       font-size: 0.9em;
@@ -98,16 +109,18 @@
       padding: 2rem 0;
       border-top: 1px solid #e0e0e0;
     }
+
     footer a {
       color: #888;
       text-decoration: none;
       margin: 0 0.5rem;
     }
+
     footer a:hover {
       color: #0077cc;
     }
-    
-        .contact-item {
+
+    .contact-item {
       display: flex;
       align-items: center;
       margin-bottom: 0.6rem;
@@ -116,40 +129,47 @@
       text-decoration: none;
       transition: color 0.3s ease;
     }
-        .contact-item:hover {
+
+    .contact-item:hover {
       color: #0077cc;
     }
-        .contact-item i {
+
+    .contact-item i {
       margin-right: 10px;
       min-width: 20px;
       text-align: center;
     }
-    <!--profile image setting->
-        .profile {
+
+    .profile {
       text-align: center;
       margin-bottom: 1.5rem;
     }
+
     .profile img {
       width: 200px;
       height: 200px;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 0.5rem;
-      border: 4px solid #ccc; /* circle border */
+      border: 4px solid #ccc;
       padding: 4px;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     }
+
     .profile h2 {
       margin: 0.2rem 0 0.4rem;
       font-size: 1.1em;
-    <!--dark mode-->
-       .dark-mode {
+    }
+
+    .dark-mode {
       background-color: #1e1e1e;
       color: #ccc;
     }
+
     .dark-mode .contact-item {
       color: #ccc;
     }
+
     .toggle-btn {
       display: inline-block;
       margin-bottom: 1.2rem;
@@ -160,70 +180,77 @@
       background: transparent;
       cursor: pointer;
     }
+
     @media (max-width: 600px) {
-      body {
-        padding: 1rem;
+      main {
+        flex-direction: column;
       }
+
+      aside {
+        margin-right: 0;
+        margin-bottom: 2rem;
+      }
+
       .profile img {
         width: 80px;
         height: 80px;
       }
-    
+    }
   </style>
 </head>
-<body>
-  <nav>
-    <div class="nav-brand">Yan Yan</div>
-    <div class="nav-links">
-      <a href="#about">About Me</a>
-      <a href="#projects">Projects</a>
-      <a href="#publications">Publications</a>
-      <a href="#blog">Blog</a>
-      <a href="CV_YanYan-ZY简易版.pdf" target="_blank">CV</a>
-    </div>
-  </nav>
-
+  
 
   
-  <main>
-    <aside>
-      <div class="profile">
-        <img src="travel.jpg" alt="Yan Yan">
-        <h2>Yan Yan</h2>
-        <p>MSc Biomedical Engineering</p>
+<body>
+  <div class="container">
+    <nav>
+      <div class="nav-brand">Yan Yan</div>
+      <div class="nav-links">
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#blog">Blog</a>
+        <a href="CV_YanYan-ZY简易版.pdf" target="_blank">CV</a>
       </div>
+    </nav>
 
-      <br>
-      <div class="contact-item">
-        <i class="fas fa-map-marker-alt"></i><span>Based, Switzerland</span>
-      </div>
-      <div class="contact-item">
-        <i class="fas fa-graduation-cap"></i><span>University Basel</span>
-      </div>
+    <main>
+      <aside>
+        <div class="profile">
+          <img src="travel.jpg" alt="Yan Yan">
+          <h2>Yan Yan</h2>
+          <p>MSc Biomedical Engineering</p>
+        </div>
 
-      
-      <a href="mailto:yanyan200109@outlook.com" class="contact-item" ><i class='fas fa-envelope'></i><span>Email</span></a>
-      <!-- 🐙 GitHub 🔗🌐-->
-      <a href="https://github.com/YanYan6WLF" target="_blank" class="contact-item"> <i class="fab fa-github"></i> <span>GitHub</span>  </a>
-      <a href="https://scholar.google.com/citations?user=yourID" target="_blank" class="contact-item"><i class="fas fa-graduation-cap"></i><span>Google Scholar</span></a>
-      <a href="https://www.linkedin.com/in/yan-yan-741467290" target="_blank" class="contact-item"><i class="fab fa-linkedin-in"></i>  <span>LinkedIn</span></a>
-    </aside>
-    <div>
-      <section id="about">
-        <h2>About Me</h2>
-        <p>I am a biomedical engineering student passionate about medical robotics, sensor-driven control systems, and neurotechnology. My background spans from dental technology to soft robotics and hydrogel-based neural interfaces.</p>
-      </section>
-      <section>
-        <h2>Research Interests</h2>
-        <ul>
-          <li>Medical robotics and intelligent control</li>
-          <li>Hydrogel-based neural stimulation interfaces</li>
-          <li>Sensor fusion and real-time feedback systems</li>
-          <li>Digital dentistry and craniofacial imaging</li>
-        </ul>
-      </section>
-    </div>
-  </main>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i><span>Based, Switzerland</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-graduation-cap"></i><span>University Basel</span>
+        </div>
+        <a href="mailto:yanyan200109@outlook.com" class="contact-item"><i class='fas fa-envelope'></i><span>Email</span></a>
+        <a href="https://github.com/YanYan6WLF" target="_blank" class="contact-item"><i class="fab fa-github"></i><span>GitHub</span></a>
+        <a href="https://scholar.google.com/citations?user=yourID" target="_blank" class="contact-item"><i class="fas fa-graduation-cap"></i><span>Google Scholar</span></a>
+        <a href="https://www.linkedin.com/in/yan-yan-741467290" target="_blank" class="contact-item"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+      </aside>
+
+      <div>
+        <section id="about">
+          <h2>About Me</h2>
+          <p>I am a biomedical engineering student passionate about medical robotics, sensor-driven control systems, and neurotechnology. My background spans from dental technology to soft robotics and hydrogel-based neural interfaces.</p>
+        </section>
+        <section>
+          <h2>Research Interests</h2>
+          <ul>
+            <li>Medical robotics and intelligent control</li>
+            <li>Hydrogel-based neural stimulation interfaces</li>
+            <li>Sensor fusion and real-time feedback systems</li>
+            <li>Digital dentistry and craniofacial imaging</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </div>
 
   <footer>
     <p>
