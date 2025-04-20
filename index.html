@@ -22,34 +22,35 @@
       line-height: 1.6;
     }
 
-
-    nav {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 1rem 2rem;
-        border-bottom: 1px solid #eee;
-        font-weight: 500;
-        gap: 3rem;
-      }
-      .nav-brand {
-        font-size: 1.1rem;
-        font-weight: bold;
-        color: #222;
-        flex-shrink: 0;
-      }
-      .nav-links {
-        display: flex;
-        gap: 2.5rem;
-      }
-      .nav-links a {
-        text-decoration: none;
-        color: #333;
-      }
-      .nav-links a:hover {
-        color: #0077cc;
-      }
-        
+      nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 8vw;
+      border-bottom: 1px solid #eee;
+      font-weight: 500;
+    }
+    .nav-brand {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #333;
+    }
+    .nav-links {
+      display: flex;
+      gap: 3rem;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+    }
+    .nav-links a:visited,
+    .nav-links a:active {
+      color: #333;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+   
 
     main {
       display: flex;
@@ -172,14 +173,18 @@
 </head>
 <body>
   <nav>
-    <span class="nav-brand">Yan Yan</span>
-    <a href="index.html">About Me</a>
-    <a href="projects.html">Projects</a>
-    <a href="publications.html">Publications</a>
-    <a href="blog.html">Blog</a>
-    <a href="CV_YanYan-ZY简易版.pdf" target="_blank">CV</a>
+    <div class="nav-brand">Yan Yan</div>
+    <div class="nav-links">
+      <a href="#about">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#publications">Publications</a>
+      <a href="#blog">Blog</a>
+      <a href="CV_YanYan-ZY简易版.pdf" target="_blank">CV</a>
+    </div>
   </nav>
 
+
+  
   <main>
     <aside>
       <div class="profile">
