@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Welcome to  Yan`s Site</title>
+  <!--icon favicon-->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
    <style>
     /* 只针对 class 为 special-link 的链接设置样式 */
     a.special-link:link {
@@ -50,7 +53,7 @@
   <img src="travel.jpg" alt="Workplace" usemap="#workmap">
   <map name="workmap">
     <area shape="rect" coords="50,500,500,700" alt="Greece" href="https://zh.wikipedia.org/wiki/%E5%B8%8C%E8%85%8A" onclick="myFunction()" target="_blank">
-    <area shape="circle" coords="600，700，1000" alt="me" href="https://github.com/YanYan6WLF/YanYan.github.io/blob/main/1.jpg" target="_blank">
+    <area shape="circle" coords="600，700，100" alt="me" href="https://github.com/YanYan6WLF/YanYan.github.io/blob/main/1.jpg" onclick="myFunction()"  target="_blank">
   </map>
   <script>
   function myFunction() {
@@ -145,7 +148,35 @@
           p {
             color: red;
           }
-  
+  <hr>
+  <!--picture响应不同屏幕大小>
+  如何使用<picture>标签：
+
+<picture>
+  <source media="(min-width:650px)" srcset="img_pink_flowers.jpg">
+  <source media="(min-width:465px)" srcset="img_white_flower.jpg">
+  <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+</picture>
+
+<!--about backgroound image-->
+  <style>
+body {
+  background-image: url('img_girl.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; 若是想strech就是100% 100%
+}
+</style>
+
+<!--about pitcute>
+  Show different images for different screen sizes:
+
+<picture>
+  <source media="(min-width: 650px)" srcset="img_food.jpg">
+  <source media="(min-width: 465px)" srcset="img_car.jpg">
+  <img src="img_girl.jpg">
+</picture>
+
 </body>
 </html>
 
