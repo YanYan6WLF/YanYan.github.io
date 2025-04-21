@@ -60,6 +60,11 @@
     .nav-links a:hover {
       text-decoration: underline;
     }
+    .nav-links a.active {
+      color: #0077cc;
+      font-weight: bold;
+      text-decoration: underline;
+    }
 
     /*--把 <main> 设置成弹性盒容器|它的子元素（aside 和 <div>）会自动横向排列--*/
     main {
@@ -411,6 +416,46 @@
       function toggleAside() {
         document.getElementById("contactLinks").classList.toggle("show");
       }
+    </script>
+
+
+
+
+
+      <script>
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".nav-links a");
+    
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              // 获取当前 section 的 id
+              const id = entry.target.id;
+    
+              // 清除所有链接的 active 类
+              navLinks.forEach(link => {
+                link.classList.remove("active");
+              });
+    
+              // 给当前链接添加 active 类
+              const activeLink = document.querySelector(`.nav-links a[href="#${id}"]`);
+              if (activeLink) {
+                activeLink.classList.add("active");
+              }
+            }
+          });
+        },
+        {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.6, // 60% 可见时触发
+        }
+      );
+    
+      sections.forEach(section => {
+        observer.observe(section);
+      });
     </script>
 
 
