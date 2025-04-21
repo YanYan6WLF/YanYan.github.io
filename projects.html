@@ -1,1 +1,474 @@
-<html><body><h1>Projects</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yan Yan | Welcome to my site 😊!</title>
+  <link rel="icon" type="image/jpg" href="favicon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #333;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid #eee;
+      font-weight: 500;
+      gap: 14rem;
+    }
+
+    .nav-brand {
+      font-size: 2.4rem;
+      font-weight: bold;
+      color: #333;
+      
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 3rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+    .nav-links a.active {
+      color: pink;
+      border-bottom: 2px solid powderblue;
+      font-weight: bold;
+    }
+
+    /*--把 <main> 设置成弹性盒容器|它的子元素（aside 和 <div>）会自动横向排列--*/
+    main {
+      display: flex;
+      padding: 3rem 0;
+    }
+
+    aside {
+      flex: 0 0 250px;
+      margin-right: 2rem;
+      background-color: #f9f9f9;
+      padding: 1rem;
+      border-radius: 8px;
+      position: sticky;
+    }
+
+
+    aside img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    aside h2 {
+      font-size: 1.2em;
+      margin: 0.5rem 0;
+    }
+
+    aside p, aside a {
+      font-size: 0.95em;
+      color: #666;
+    }
+
+    aside a {
+      display: block;
+      margin-bottom: 0.5rem;
+      text-decoration: none;
+    }
+
+    section {
+      flex: 1;
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #888;
+      padding: 2rem 0;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    footer a {
+      color: #888;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+    footer a:hover {
+      color: #0077cc;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.6rem;
+      color: #444;
+      font-size: 0.95em;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-item:hover {
+      color: #0077cc;
+    }
+
+    .contact-item i {
+      margin-right: 10px;
+      min-width: 20px;
+      text-align: center;
+    }
+
+    .profile {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .profile img {
+      width: 200px;
+      align-items: center;
+
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.5rem;
+      border: 4px solid #ccc;
+      padding: 4px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile h2 {
+      margin: 0.2rem 0 0.4rem;
+      font-size: 1.1em;
+    }
+
+    .dark-mode {
+      background-color: #1e1e1e;
+      color: #ccc;
+    }
+
+
+    .dark-mode .nav-links a,
+    .dark-mode .nav-brand,
+    .dark-mode .contact-item,
+    .dark-mode aside h2,
+    .dark-mode aside p {
+      color: #ccc;
+    }
+
+    .dark-mode .toggle-btn {
+      color: #ccc;
+      border-color: #666;
+    }
+    
+
+    
+
+        .toggle-btn {
+      margin-left: auto;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.95rem;
+      line-height: 1.2;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+
+
+
+
+
+
+
+    
+
+    @media (max-width: 400px) {
+      main {
+        flex-direction: column;
+      }
+
+      aside {
+        margin-right: 0;
+        margin-bottom: 2rem;
+      }
+
+      .profile img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+
+      /* 折叠按钮 */
+      .menu-btn, .aside-toggle-btn {
+        display: none;
+        font-size: 1.2rem;
+        background: none;
+        border: 1px solid #aaa;
+        padding: 0.3rem 0.6rem;
+        margin-left: 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      /* 适配小屏幕 */
+    @media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .aside-toggle-btn {
+    display: block;
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  /* ✅ 修改后的导航链接：下拉覆盖而不是右扩 */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: #f9f9f9;
+    padding: 1rem;
+    position: absolute;
+    top: 70px; /* 距离顶部 */
+    left: 1rem;
+    width: calc(100% - 2rem);
+    z-index: 99;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  #contactLinks {
+    display: none;
+    margin-top: 1rem;
+  }
+
+  #contactLinks.show {
+    display: block;
+  }
+
+  main {
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+    
+
+
+
+    
+  </style>
+</head>
+  
+
+  
+<body>
+  <div class="container">
+    <nav >
+      <div class="nav-brand">Yan Yan</div>
+      <!-- ☰ 折叠按钮，控制导航链接 -->
+        <button class="menu-btn" onclick="toggleNav()">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#blog">Blog</a>
+        <a href="#CV">CV</a>
+      </div>
+      <button class="toggle-btn" id="modeToggleBtn" onclick="toggleDarkMode()">
+        🌙 Dark Mode
+      </button>
+
+    </nav>
+
+    <main>
+      <aside >
+        <div class="profile">
+          <img src="travel.jpg" alt="Yan Yan">
+          <h2>Yan Yan</h2>
+          <p>MSc Biomedical Engineering</p>
+        </div>
+          <!-- 折叠按钮 -->
+        <button class="aside-toggle-btn" onclick="toggleAside()">📂 Contact</button>
+  
+        <div id="contactLinks">
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i><span>Based, Switzerland</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-graduation-cap"></i><span>University Basel</span>
+        </div>
+        <a href="mailto:yanyan200109@outlook.com" class="contact-item"><i class='fas fa-envelope'></i><span>Email</span></a>
+        <a href="https://github.com/YanYan6WLF" target="_blank" class="contact-item"><i class="fab fa-github"></i><span>GitHub</span></a>
+        <a href="https://scholar.google.com/citations?user=yourID" target="_blank" class="contact-item"><i class="fas fa-graduation-cap"></i><span>Google Scholar</span></a>
+        <a href="https://www.linkedin.com/in/yan-yan-741467290" target="_blank" class="contact-item"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+        </div>
+      </aside>
+
+
+      <div>
+        <section id="projects">
+          <h2>Projects</h2>
+        </section>
+        <section>
+          <h2 style='color:#1a8f67'	>Semester Project: Self-locking Cuff Electrodes for the Nerve Stimulation   </h2>
+          <div class="contact-item">
+            <i class="fas fa-graduation-cap"></i><span>, Multi-Scale Robotics Laboratory, D-MAVT, ETH </span>
+          </div>
+          <ul>
+            <li>Developed a wireless, self-locking nerve cuff electrode tailored for nerve stimulation, based on a PNIPAM/PEGDA bilayer hydrogel system with thermoresponsive properties. </li>
+            <li>Engineered and optimized hydrogel formulation and bilayer structure to enable tuneable cuff curvature for nerves of varying diameters. </li>
+            <li>Utilized a custom-built 3D printer for precise fabrication and structural prototyping.  </li>
+            
+          </ul>
+        </section>
+      </div>
+
+
+
+
+
+
+      
+    </main>
+    
+  </div>
+
+  <footer>
+    <p>
+      <a href="mailto:your.email@example.com">Email</a>
+      <a href="https://github.com/YanYan6WLF" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=yourID" target="_blank">Google Scholar</a>
+      <a href="index_zh.html">中文版本</a>
+    </p>
+    <p>&copy; 2025 Yan Yan. All rights reserved.</p>
+  </footer>
+  <!-- ✅ JavaScript to enable dark mode -->
+    <script>
+      function toggleDarkMode() {
+        const body = document.body;
+        const btn = document.getElementById("modeToggleBtn");
+    
+        body.classList.toggle('dark-mode');
+    
+        // 更改按钮文字
+        if (body.classList.contains('dark-mode')) {
+          btn.innerHTML = '🌞 Light Mode';
+        } else {
+          btn.innerHTML = '🌙 Dark Mode';
+        }
+      }
+    </script>
+
+    <script>
+      function toggleDarkMode() {
+        const body = document.body;
+        const btn = document.getElementById("modeToggleBtn");
+        const isDark = body.classList.toggle("dark-mode");
+        btn.innerHTML = isDark ? '☀ Light Mode' : '🌙 Dark Mode';
+      }
+    
+      function toggleNav() {
+        document.getElementById("navLinks").classList.toggle("show");
+      }
+    
+      function toggleAside() {
+        document.getElementById("contactLinks").classList.toggle("show");
+      }
+    </script>
+
+
+
+
+
+      <script>
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".nav-links a");
+    
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              // 获取当前 section 的 id
+              const id = entry.target.id;
+    
+              // 清除所有链接的 active 类
+              navLinks.forEach(link => {
+                link.classList.remove("active");
+              });
+    
+              // 给当前链接添加 active 类
+              const activeLink = document.querySelector(`.nav-links a[href="#${id}"]`);
+              if (activeLink) {
+                activeLink.classList.add("active");
+              }
+            }
+          });
+        },
+        {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.6, // 60% 可见时触发
+        }
+      );
+    
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    </script>
+
+
+
+</body>
+</html>
