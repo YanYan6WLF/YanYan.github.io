@@ -11,6 +11,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
@@ -63,9 +67,15 @@ main {
       padding: 3rem 0;
     }
 
+  <!--flex-grow: 0	不会随着剩余空间而变宽;flex-shrink: 0	浏览器窗口缩小时也不会缩小;flex-basis: 250px	初始宽度就是 250px-;✅ 总结：aside 固定宽度为 250px，不能变宽、不能变窄，就像一块铁板！-->
     aside {
       flex: 0 0 250px;
       margin-right: 2rem;
+    }
+
+    aside {
+      position: sticky;
+      top: 2rem;
     }
 
     aside img {
