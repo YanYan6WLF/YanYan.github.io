@@ -410,62 +410,22 @@
       }
     </script>
 
+
+
+
+
+
     <script>
-      function toggleDarkMode() {
-        const body = document.body;
-        const btn = document.getElementById("modeToggleBtn");
-        const isDark = body.classList.toggle("dark-mode");
-        btn.innerHTML = isDark ? '☀ Light Mode' : '🌙 Dark Mode';
-      }
-    
-      function toggleNav() {
-        document.getElementById("navLinks").classList.toggle("show");
-      }
-    
-      function toggleAside() {
-        document.getElementById("contactLinks").classList.toggle("show");
-      }
-    </script>
+  // 根据当前页面 URL 自动高亮导航链接
+  const currentPath = window.location.pathname;
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    const href = link.getAttribute("href");
+    if (currentPath.includes(href)) {
+      link.classList.add("active");
+    }
+  });
+</script>
 
-
-
-
-
-      <script>
-      const sections = document.querySelectorAll("section[id]");
-      const navLinks = document.querySelectorAll(".nav-links a");
-    
-      const observer = new IntersectionObserver(
-        entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              // 获取当前 section 的 id
-              const id = entry.target.id;
-    
-              // 清除所有链接的 active 类
-              navLinks.forEach(link => {
-                link.classList.remove("active");
-              });
-    
-              // 给当前链接添加 active 类
-              const activeLink = document.querySelector(`.nav-links a[href="#${id}"]`);
-              if (activeLink) {
-                activeLink.classList.add("active");
-              }
-            }
-          });
-        },
-        {
-          root: null,
-          rootMargin: "0px",
-          threshold: 0.6, // 60% 可见时触发
-        }
-      );
-    
-      sections.forEach(section => {
-        observer.observe(section);
-      });
-    </script>
 
 
 
