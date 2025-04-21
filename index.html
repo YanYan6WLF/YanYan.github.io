@@ -243,7 +243,9 @@
         <a href="#blog">Blog</a>
         <a href="CV_YanYan-ZY简易版.pdf" target="_blank">CV</a>
       </div>
-      <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+      <button class="toggle-btn" id="modeToggleBtn" onclick="toggleDarkMode()">
+        🌙 Dark Mode
+      </button>
 
     </nav>
 
@@ -297,10 +299,21 @@
     <p>&copy; 2025 Yan Yan. All rights reserved.</p>
   </footer>
   <!-- ✅ JavaScript to enable dark mode -->
-  <script>
-  function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-  }
-  </script>
+    <script>
+      function toggleDarkMode() {
+        const body = document.body;
+        const btn = document.getElementById("modeToggleBtn");
+    
+        body.classList.toggle('dark-mode');
+    
+        // 更改按钮文字
+        if (body.classList.contains('dark-mode')) {
+          btn.innerHTML = '🌞 Light Mode';
+        } else {
+          btn.innerHTML = '🌙 Dark Mode';
+        }
+      }
+    </script>
+
 </body>
 </html>
