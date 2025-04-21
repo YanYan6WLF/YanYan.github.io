@@ -81,13 +81,12 @@ main {
 
 aside {
   flex: 0 0 250px;
-  margin-right: 2rem;
+  margin-right: 4rem;
   background-color: #f9f9f9;
   padding: 1rem;
   border-radius: 8px;
-  position: sticky;
-  top: 1.5rem;
-  height: fit-content;
+  position: fixed;
+
 }
 
 aside img {
