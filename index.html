@@ -248,41 +248,51 @@
       }
       
       /* 适配小屏幕 */
-      @media (max-width: 768px) {
-        .menu-btn {
-          display: block;
-        }
-      
-        .aside-toggle-btn {
-          display: block;
-          margin: 1rem 0;
-          width: 100%;
-        }
-      
-        .nav-links {
-          display: none;
-          flex-direction: column;
-          gap: 1rem;
-          padding-top: 1rem;
-        }
-      
-        .nav-links.show {
-          display: flex;
-        }
-      
-        #contactLinks {
-          display: none;
-          margin-top: 1rem;
-        }
-      
-        #contactLinks.show {
-          display: block;
-        }
-      
-        main {
-          flex-direction: column;
-        }
-      }
+    @media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .aside-toggle-btn {
+    display: block;
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  /* ✅ 修改后的导航链接：下拉覆盖而不是右扩 */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: #f9f9f9;
+    padding: 1rem;
+    position: absolute;
+    top: 70px; /* 距离顶部 */
+    left: 1rem;
+    width: calc(100% - 2rem);
+    z-index: 99;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  #contactLinks {
+    display: none;
+    margin-top: 1rem;
+  }
+
+  #contactLinks.show {
+    display: block;
+  }
+
+  main {
+    flex-direction: column;
+  }
+}
+
 
 
 
