@@ -82,7 +82,6 @@ main {
 aside {
       flex: 0 0 250px;
       margin-right: 2rem;
-      position: fixed;
       top: 2rem;
       background: white;
       border-radius: 12px;
@@ -90,7 +89,10 @@ aside {
       padding: 1.5rem;
 
     }
-
+.sticky-container {
+  position: sticky;
+  top: 2rem;
+}
 
 
 
