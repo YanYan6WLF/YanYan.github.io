@@ -233,6 +233,63 @@
         height: 80px;
       }
     }
+
+
+    /* 默认隐藏菜单按钮 */
+    .menu-btn {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: inherit;
+    }
+    
+    /* 手机端折叠行为 */
+    @media (max-width: 768px) {
+      .menu-btn {
+        display: block;
+        margin-left: 1rem;
+      }
+    
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        padding-top: 1rem;
+      }
+    
+      .nav-links.show {
+        display: flex;
+      }
+    
+      aside {
+        display: none;
+        position: absolute;
+        top: 140px;
+        left: 0;
+        width: 100%;
+        background: #f9f9f9;
+        z-index: 10;
+        padding: 1rem;
+      }
+    
+      aside.show {
+        display: block;
+      }
+    
+      main {
+        flex-direction: column;
+      }
+    }
+
+
+
+    
+
+
+
+    
   </style>
 </head>
   
@@ -240,7 +297,7 @@
   
 <body>
   <div class="container">
-    <nav>
+    <nav id="navLinks">
       <div class="nav-brand">Yan Yan</div>
       <div class="nav-links">
         <a href="#about">About Me</a>
@@ -252,11 +309,12 @@
       <button class="toggle-btn" id="modeToggleBtn" onclick="toggleDarkMode()">
         🌙 Dark Mode
       </button>
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
     </nav>
 
     <main>
-      <aside>
+      <aside id="sidebar">
         <div class="profile">
           <img src="travel.jpg" alt="Yan Yan">
           <h2>Yan Yan</h2>
@@ -320,6 +378,21 @@
         }
       }
     </script>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById('navLinks').classList.toggle('show');
+        document.getElementById('sidebar').classList.toggle('show');
+      }
+    
+      function toggleDarkMode() {
+        const body = document.body;
+        const btn = document.getElementById("modeToggleBtn");
+        const isDark = body.classList.toggle("dark-mode");
+        btn.innerHTML = isDark ? '☀ Light Mode' : '🌙 Dark Mode';
+      }
+    </script>
+
 
 </body>
 </html>
