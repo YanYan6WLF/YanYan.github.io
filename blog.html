@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+
 </head>
 
 <body>
@@ -23,12 +24,13 @@
         <a href="projects.html">Projects</a>
         <a href="publications.html">Publications</a>
         <a href="blog.html">Blog</a>
+        
       </div>
       <button class="toggle-btn" id="modeToggleBtn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
     </nav>
 
     <main>
-      <aside>
+      <aside >
         <div class='sticky-container'>
           <div class='profile'>
             <img src="travel.jpg" alt="Yan Yan">
@@ -50,54 +52,77 @@
       <div>
         <section id="Projects">
           <h2>Volunteer Activities</h2>
+        </section>
 
-          <!-- Volunteer Activity 1 -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 p-4 border rounded-xl shadow-sm items-center">
-            <div>
-              <h3 style='color:#1a8f67'	>Field Research on Modern Family Farms</h3>
-              <p class="text-gray-600">📍 Deyang, Sichuan, China ｜ 📅 06.2022</p>
-              <ul class="list-disc ml-6 mt-2 text-gray-700">
-                <li>Conducted field research on several modern family farms</li>
-                <li>Communicated with HK PolyU professors and students online</li>
-              </ul>
-            </div>
-             <img src="deyang.JPG" alt="Deyang, Sichuan, China" class="width: 200px; margin-left: 20px;" />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 p-4 border rounded-xl shadow-sm">
+        <!-- Left image -->
+        <src="deyang.JPG" alt="Deyang, Sichuan,China" class="rounded-md object-cover h-48 w-full" />
+      
+        <!-- Right text -->
+        <div>
+          <h3 class="text-xl font-semibold text-green-700">Field Research on Modern Family Farms</h3>
+          <p class="text-gray-600">📍 Deyang, Sichuan, China ｜ 📅 06.2022</p>
+          <ul class="list-disc ml-6 mt-2 text-gray-700">
+            <li>Conducted field research on several modern family farms</li>
+            <li>Communicated with HK PolyU professors and students online</li>
+          </ul>
+        </div>
+      </div>
+
+
+
+
+         <section >
+          <h2 style='color:#1a8f67'>	JA China, "Finance and Life" Teaching Volunteers</h2>
+          <div class="contact-item">
+            <i class="fas fa-graduation-cap"></i><span>Chengdu, Sichuan, China</span>
           </div>
-
-          <!-- Volunteer Activity 2 -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 p-4 border rounded-xl shadow-sm items-center">
-            <div>
-              <h3 style='color:#1a8f67'	>JA China, "Finance and Life" Teaching Volunteers</h3>
-              <p class="text-gray-600">📍 Chengdu, Sichuan, China ｜ 📅 03.2022–06.2022</p>
-              <ul class="list-disc ml-6 mt-2 text-gray-700">
-                <li>Imparted financial knowledge to senior high school students</li>
-              </ul>
-            </div>
-            <img src="JA.jpg" alt="JA China" class="width: 200px; margin-left: 20px;" />
+          <div class="contact-item"><i class="fas fa-calendar-alt"></i><span>03.2022-06.2022</span></div>
+          <div style="display: flex; align-items: center; margin-bottom: 1.5em;">
+          <ul>
+            <li> Imparted financial knowledge to senior high school students.</li>
+          </ul>
+          <img src="JA.jpg" alt="JA China" style="width: 200px; margin-left: 20px;">
           </div>
         </section>
 
-        <!-- Others -->
+
+
+
         <section id="Projects">
           <h2>Others</h2>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 p-4 border rounded-xl shadow-sm items-center">
-            <div>
-             <h3 style='color:#1a8f67'	>Sustainability Summit Hosted by Queen's University Belfast</h3>
-              <p class="text-gray-600">📍 Online ｜ 📅 01.2022</p>
-            </div>
-            <img src="british.pdf" alt="Certificate - Queen's University Belfast" class="width: 200px; margin-left: 20px;" />
+        </section>
+        
+        <section >
+          <h2 style='color:#1a8f67'	>Sustainability Summit Hosted by Queens University Belfast</h2>
+          <div class="contact-item">
+            <i class="fas fa-graduation-cap"></i><span>Online</span>
           </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 p-4 border rounded-xl shadow-sm items-center">
-            <div>
-              <h3 style='color:#1a8f67'	>N-GEN 2020 Simulated Global Environment Negotiation Youth Summit</h3>
-              <p class="text-gray-600">📍 Online ｜ 📅 11.2020</p>
-            </div>
-            <img src="UN.jpg" alt="UN Certificate" class="width: 200px; margin-left: 20px;" />
+          <div class="contact-item"><i class="fas fa-calendar-alt"></i><span>01.2022</span></div>
+          <div style="display: flex; align-items: center; margin-bottom: 1.5em;">
+          <img src="british.pdf" alt="颜妍-2019141210118-英国贝尔法斯特女王大学证书" style="width: 300px; margin-left: 20px;">
           </div>
         </section>
+
+        <section >
+          <h2 style='color:#1a8f67'	>N-GEN 2020 Simulated Global Environment Negotiation Youth Summit</h2>
+          <div class="contact-item">
+            <i class="fas fa-graduation-cap"></i><span>Online</span>
+          </div>
+          <div class="contact-item"><i class="fas fa-calendar-alt"></i><span>11.2020</span></div>
+          <div style="display: flex; align-items: center; margin-bottom: 1.5em;">
+          <img src="UN.jpg" alt="UN" style="width: 300px; margin-left: 20px;">
+          </div>
+        </section>
+
+        
       </div>
+        
+
+
+
+
+      
     </main>
   </div>
 
@@ -111,6 +136,7 @@
     </p>
     <p>&copy; 2025 Yan Yan. All rights reserved.</p>
   </footer>
+
 </body>
 
 </html>
