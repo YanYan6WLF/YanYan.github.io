@@ -1,1 +1,97 @@
-<html><body><h1>Blog</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yan Yan | Welcome to my site 😊!</title>
+  <link rel="icon" type="image/jpg" href="favicon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <nav>
+      <div class="nav-brand">Yan Yan</div>
+      <button class="menu-btn" onclick="toggleNav()">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="blog.html">Blog</a>
+      
+      </div>
+      <button class="toggle-btn" id="modeToggleBtn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    </nav>
+
+    <main>
+      <aside >
+        <div class='sticky-container'>
+          <div class='profile'>
+            <img src="travel.jpg" alt="Yan Yan">
+            <h2>Yan Yan</h2>
+            <p>MSc Biomedical Engineering</p>
+          </div>
+          <button class="aside-toggle-btn" onclick="toggleAside()">📂 Contact</button>
+          <div id="contactLinks">
+            <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Based, Switzerland</span></div>
+            <div class="contact-item"><i class="fas fa-graduation-cap"></i><span>University Basel</span></div>
+            <a href="mailto:yanyan200109@outlook.com" class="contact-item"><i class='fas fa-envelope'></i><span>Email</span></a>
+            <a href="https://github.com/YanYan6WLF" target="_blank" class="contact-item"><i class="fab fa-github"></i><span>GitHub</span></a>
+            <a href="https://scholar.google.com/citations?user=yourID" target="_blank" class="contact-item"><i class="fas fa-graduation-cap"></i><span>Google Scholar</span></a>
+            <a href="https://www.linkedin.com/in/yan-yan-741467290" target="_blank" class="contact-item"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+          </div>
+        </div>
+      </aside>
+
+      <div>
+        <section id="Blog">
+          <h2>Blog</h2>
+        </section>
+        
+        <section >
+          <h2 style='color:#1a8f67'	>Semester Project: Self-locking Cuff Electrodes for the Nerve Stimulation   </h2>
+          <div class="contact-item">
+            <i class="fas fa-graduation-cap"></i><span>Multi-Scale Robotics Laboratory, D-MAVT, ETH </span>
+          </div>
+          <div class="contact-item"><i class="fas fa-calendar-alt"></i><span>10.2024--Present</span></div>
+          <div style="display: flex; align-items: center; margin-bottom: 1.5em;">
+          <ul>
+            <li>Developed a wireless, self-locking nerve cuff electrode tailored for nerve stimulation, based on a PNIPAM/PEGDA bilayer hydrogel system with thermoresponsive properties. </li>
+            <li>Engineered and optimized hydrogel formulation and bilayer structure to enable tuneable cuff curvature for nerves of varying diameters. </li>
+            <li>Utilized a custom-built 3D printer for precise fabrication and structural prototyping.  </li>
+          </ul>
+          <img src="图片1.png" alt="cuff electrode" style="width: 300px; margin-left: 20px;">
+          </div>
+        </section>
+        
+       
+      </div>
+
+
+      
+
+
+      
+    </main>
+  </div>
+
+  <footer>
+    <p>
+      <a href="mailto:your.email@example.com">Email</a>
+      <a href="https://github.com/YanYan6WLF" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=yourID" target="_blank">Google Scholar</a>
+      <a href="index_zh.html">中文版本</a>
+    </p>
+    <p>&copy; 2025 Yan Yan. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>
