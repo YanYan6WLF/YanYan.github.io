@@ -1,0 +1,9 @@
+# 忽略 VS Code 设置
+.vscode/
+
+# 忽略系统缓存文件
+.DS_Store
+Thumbs.db
+
+# 忽略 Jekyll 生成的临时网站
+_site/
