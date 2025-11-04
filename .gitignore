@@ -1,12 +1,26 @@
-# 忽略 VS Code 设置
-.vscode/
-
-# 忽略系统缓存文件
+# ===== System Files =====
 .DS_Store
 Thumbs.db
 
-# 忽略 Jekyll 生成的临时网站
+# ===== Editor Settings =====
+.vscode/
+.idea/
+
+# ===== GitHub Pages Build Output =====
 _site/
+
+# ===== Node / Python Cache =====
+node_modules/
+__pycache__/
+
+# ===== Logs / Temp =====
+*.log
+*.tmp
+
+# ===== Others =====
+*.zip
+*.rar
+
 
 
 # 避免仓库越来越大
