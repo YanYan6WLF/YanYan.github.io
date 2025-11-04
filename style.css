@@ -158,6 +158,82 @@ nav {
   flex-shrink: 0;
 }
 
+/* ===== 🌙 改进版暗色模式视觉优化 ===== */
+.dark-mode {
+  background-color: #121212;  /* 深色背景 */
+  color: #e0e0e0;             /* 主文字提亮 */
+}
+
+.dark-mode nav {
+  background-color: #1f1f1f;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.05);
+}
+
+.dark-mode .nav-brand,
+.dark-mode .nav-links a,
+.dark-mode .contact-item,
+.dark-mode aside h2,
+.dark-mode aside p,
+.dark-mode aside a {
+  color: #ddd; /* 提亮侧栏文字 */
+}
+
+.dark-mode .contact-item i {
+  color: #bbb;
+}
+
+/* 链接更柔和、更清晰 */
+.dark-mode a {
+  color: #80bfff;
+  text-decoration: none;
+}
+
+.dark-mode a:hover {
+  color: #aad4ff;
+  text-decoration: underline;
+}
+
+/* 左栏底色与阴影 */
+.dark-mode aside {
+  background: #1a1a1a;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+}
+
+/* hover 时的浅蓝高亮 */
+.dark-mode .contact-item:hover {
+  color: #66b3ff;
+}
+
+/* 暗色模式下的图片标题 */
+.dark-mode figcaption,
+.dark-mode #caption {
+  color: #ccc;
+}
+
+/* 暗色 footer */
+.dark-mode footer {
+  border-top: 1px solid #333;
+  color: #aaa;
+}
+
+.dark-mode footer a {
+  color: #80bfff;
+}
+
+.dark-mode footer a:hover {
+  color: #aad4ff;
+}
+
+/* 左栏头像适配暗色背景 */
+.dark-mode .profile img {
+  border-color: #444;
+  box-shadow: 0 0 10px rgba(255,255,255,0.08);
+}
+
+
+
+
+
 main {
   display: flex;
   padding: 3rem 0;
