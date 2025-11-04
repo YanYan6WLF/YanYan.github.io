@@ -15,23 +15,28 @@
 <body>
   <div class="container">
     <nav>
-      <div class="nav-brand">Yan Yan</div>
-      <button class="menu-btn" onclick="toggleNav()">☰</button>
-      <div class="nav-links" id="navLinks">
-        <a href="index.html">About Me</a>
-        <a href="projects.html">Projects</a>
-        <a href="publications.html">Publications</a>
-        <a href="blog.html">Blog</a>
-        
+      <div class="nav-container">
+        <div class="nav-brand">Yan Yan</div>
+
+        <button class="menu-btn" onclick="toggleNav()">☰</button>
+
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">About Me</a>
+          <a href="projects.html">Projects</a>
+          <a href="Education.html">Education</a>
+          <a href="Industrial Intership.html">Industrial Intership</a>
+          <a href="publications.html">Publications</a>
+          <a href="blog.html">Blog</a>
+        </div>
+        <button class="toggle-btn" id="modeToggleBtn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
       </div>
-      <button class="toggle-btn" id="modeToggleBtn" onclick="toggleDarkMode()">🌙 Dark</button>
     </nav>
 
     <main>
       <aside >
         <div class='sticky-container'>
           <div class='profile'>
-            <img src="travel.jpg" alt="Yan Yan">
+            <img src="images/travel.jpg" alt="Yan Yan">
             <h2>Yan Yan</h2>
             <p>MSc Biomedical Engineering</p>
           </div>
@@ -41,7 +46,7 @@
             <div class="contact-item"><i class="fas fa-graduation-cap"></i><span>University Basel</span></div>
             <a href="mailto:yanyan200109@outlook.com" class="contact-item"><i class='fas fa-envelope'></i><span>Email</span></a>
             <a href="https://github.com/YanYan6WLF" target="_blank" class="contact-item"><i class="fab fa-github"></i><span>GitHub</span></a>
-            <a href="https://scholar.google.com/citations?user=yourID" target="_blank" class="contact-item"><i class="fas fa-graduation-cap"></i><span>Google Scholar</span></a>
+            <a href="https://scholar.google.com/citations?user=yourID" target="_blank" class="contact-item"><i class="fab fa-google" ></i><span>Google Scholar</span></a>
             <a href="https://www.linkedin.com/in/yan-yan-741467290" target="_blank" class="contact-item"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
           </div>
         </div>
@@ -50,10 +55,11 @@
       <div>
         <section id="about">
           <h2>About Me</h2>
-          <p>I am a biomedical engineering student at <a href='https://dbe.unibas.ch/en/'>Department of Biomedical Engineering</a>, <a href='https://www.unibas.ch/en.html'>University Basel</a>. I received my bachelor's degree in 2023 from <a href="https://www.hxkq.org/">West China School/Hospital of Stomatology</a> at <a href="https://www.scu.edu.cn/">Sichuan University (SCU)</a>, <a href="https://www.topuniversities.com/university-subject-rankings/dentistry">one of the top dental schools in China</a>.</p>
-          <P> My background spans dentistry, biomaterials, biomedical image processing & analysis. I completed my semester project at the <a href='https://msrl.ethz.ch/'>Multi-Scale Robotics Lab (MSRL)</a>, D-MAVT, ETH Zurich, focusing on the development of thermally stimulated self-locking cuff electrodes designed for magnetically assisted neural stimulation. I am fortunate to be advised by <a href='https://msrl.ethz.ch/the-lab/team/hc_details.html'>Huimin Chen</a>, under the supervision of <a href='https://msrl.ethz.ch/the-lab/team/sp_details.html'>Prof. Salvador Pané i Vidal</a> and <a href='https://msrl.ethz.ch/the-lab/team/SevimSemih.html'>Dr. Semih Sevim</a>.</P>
-          <P>Currently, I am currently working on my master’s thesis at the Multiscale Functional and Molecular Imaging Lab, ETH Zurich, where I focus on developing model-based and CNN-regularized algorithms for high-resolution photoacoustic image reconstruction.</P>
-          <p>You can find my CV here: <a href='CV.pdf'>Yan’s Curriculum Vitae</a>.</p>
+          <p>I am a biomedical engineering student at <a href='https://dbe.unibas.ch/en/'>Department of Biomedical Engineering</a>, <a href='https://www.unibas.ch/en.html'>University Basel</a>. I received my bachelor's degree in 2023 from <a href="https://www.hxkq.org/">West China School/Hospital of Stomatology</a> at <a href="https://www.scu.edu.cn/">Sichuan University (SCU)</a>, <a href="https://www.topuniversities.com/university-subject-rankings/dentistry">one of the top dental schools in China</a>.My background spans dentistry, biomaterials, biomedical image processing and analysis.</p>
+          <P>Currently, I am currently working on my master`s thesis at the <a href="https://www.razanskylab.org/"> Functional and Molecular Imaging Lab</a>, ETH Zurich, under the guidance of <a href="https://www.razanskylab.org/members">Dr. Luis Deán-Ben</a> and superivised by <a href="https://www.razanskylab.org/members">Prof. Daniel Razansky</a>, where I focus on developing model-based and CNN-regularized algorithms for high-resolution photoacoustic image reconstruction.</P>
+          <P>I completed my semester project at the <a href='https://msrl.ethz.ch/'>Multi-Scale Robotics Lab (MSRL)</a>, D-MAVT, ETH Zurich, focusing on the development of thermally stimulated self-locking cuff electrodes designed for magnetically assisted neural stimulation. I am fortunate to be advised by <a href='https://msrl.ethz.ch/the-lab/team/hc_details.html'>Huimin Chen</a>, under the supervision of <a href='https://msrl.ethz.ch/the-lab/team/sp_details.html'>Prof. Salvador Pané i Vidal</a> and <a href='https://msrl.ethz.ch/the-lab/team/SevimSemih.html'>Dr. Semih Sevim</a>.</P>
+
+          <p>You can find my CV here: <a href='PDF/CV-YanYan.pdf'>Yan`s Curriculum Vitae</a>.</p>
         </section>
         <section>
           <h2>Research Interests</h2>
@@ -67,9 +73,9 @@
           
           </ul>
         </section>
-        <section>
+        <!-- <section>
           <h2>News</h2>
-        </section>
+        </section> -->
         <section>
           <h2>Personal Interests</h2>
           

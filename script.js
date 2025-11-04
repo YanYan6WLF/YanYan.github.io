@@ -55,3 +55,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+
+function openModal(img) {
+  var modal = document.getElementById("imgModal");
+  var modalImg = document.getElementById("modalImg");
+  var caption = document.getElementById("caption");
+  modal.style.display = "block";
+  modalImg.src = img.src;
+  caption.innerHTML = img.alt;
+}
+
+function closeModal() {
+  document.getElementById("imgModal").style.display = "none";
+}

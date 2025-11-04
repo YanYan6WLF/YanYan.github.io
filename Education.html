@@ -16,6 +16,19 @@
 
 <body>
   <div class="container">
+    <!-- <nav>
+
+      <div class="nav-brand">Yan Yan</div>
+      <button class="menu-btn" onclick="toggleNav()">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="blog.html">Blog</a>
+        
+      </div>
+      <button class="toggle-btn" id="modeToggleBtn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    </nav> -->
     <nav>
       <div class="nav-container">
         <div class="nav-brand">Yan Yan</div>
@@ -54,30 +67,62 @@
             <a href="https://www.linkedin.com/in/yan-yan-741467290" target="_blank" class="contact-item"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
           </div>
         </div>
+        <!-- <div class="sidebar-cartoon">
+            <img src="images/xiaohei.jpeg" alt="cartoon" />
+        </div> -->
+
       </aside>
 
       <div>
         <section id="projects">
-          <h2>Publications</h2>
+          <h2>Education</h2>
         </section>
-        
-        <section >
-          <h3 style='color:#1a8f67'	><a href='PDF/Deep learning based quantitative cervical vertebral maturation analysis.pdf'> Learning Based Quantitative Cervical Vertebral Maturation Analysis</a> </h3>
+    
+        <section>
+          <h3 style="color:#1a8f67;"> M.Sc., Biomedical Engineering, University Basel, Switzerland </h3>
           <div class="contact-item">
-            <i class="fas fa-graduation-cap"></i><span>State Key Laboratory of Oral Diseases,  West China Hospital of Stomatology, Sichuan University </span>
+            <i class="fas fa-graduation-cap"></i><span>Current GPA: 5.3/6</span>
           </div>
-            <div class="contact-item"><i class="fas fa-user"></i><span>Jiang F, Abdulqader AA, Yan Y, Cheng F, Xiang T, Yu J, Li J, Qiu Y, Chen X. </span></div>
+          <div class="contact-item"><i class="fas fa-calendar-alt"></i><span>09.2023--Present</span></div>
+          <div class="contact-item"><i class="fas fa-book-reader"></i><span>Core Courses:</span></div>
 
-          <div style=" margin-bottom: 1.5em;">
-          <ul>
-            <li>Contributed to manuscript preparation and assisted in data summary and result interpretation.       </li>
-            <li>Where My Journey in Biomedical Engineering Began.</li>
-          </ul>
-   
+          <div class="project-row">
+            <ul>
+               <li> Medical Imaging and Medical Image Processing, Model-Based Signal Processing Optimization Methods, Advanced Methods in Medical Image Analysis, Principles of Medical Imaging, Statistics</li>
+               <li>Materials Science and Biomaterials, Atomic View to Materials</li>
+               <li>Introduction to LTI Systems and Control, Mechanics, Modelling and Simulation (COMSOL), Applied Cpntrol, Mechanics  </li>
+
+            </ul>
+            <div class="project-images">
+              <img src="images/Unibas.jpg" alt="University Basel" onclick="openModal(this)">
+            </div>
           </div>
         </section>
-        
-        
+
+
+        <section>
+          <h3 style="color:#1a8f67;"> B.Sc., Dental Technology, Sichuan University, West China School of Stomatology, China  </h3>
+          <div class="contact-item">
+            <i class="fas fa-graduation-cap"></i><span>GPA: 88.24/100</span>
+          </div>
+          <div class="contact-item"><i class="fas fa-calendar-alt"></i><span>09.2019--06.2023</span></div>
+          <div class="contact-item"><i class="fas fa-book-reader"></i><span>Core Courses:</span></div>
+
+          <div class="project-row">
+            <ul>
+               <li>Dental Materials, Organic Chemistry and Experiments,Medical Physics</li>
+               <li>Medical Biology, Histology and Pathology, Anatomy and Physiology,Oral and Maxillofacial Imaging Diagnostics</li>
+                <li>Mathematical Analysis, Advanced Algebra, Analytic Geometry, Medical Statistics</li>
+            </ul>
+            <div class="project-images">
+              <img src="images/scu.jpg" alt="Sichuan University" onclick="openModal(this)">
+            </div>
+          </div>
+        </section>
+
+
+
+      
     </main>
   </div>
 
@@ -91,6 +136,15 @@
     </p>
     <p>&copy; 2025 Yan Yan. All rights reserved.</p>
   </footer>
+
+
+
+<!-- Lightbox Modal -->
+<div id="imgModal" class="img-modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+  <div id="caption"></div>
+</div>
 
 </body>
 
