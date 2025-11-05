@@ -637,3 +637,28 @@ footer a:hover {
 
 
 
+
+
+
+/* --- Light mode --- */
+/* 在 CSS 中，“后定义的样式会覆盖前面相同选择器的样式”（即后者优先级更高），
+所以放在最后，可以确保它覆盖掉浏览器默认蓝紫色链接，同时不影响其他样式 */
+a {
+  color: #0077cc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #005b99;
+  text-decoration: underline;
+}
+
+/* --- Dark mode (你已有的) --- */
+.dark-mode a {
+  color: #80bfff;
+}
+
+.dark-mode a:hover {
+  color: #aad4ff;
+}
