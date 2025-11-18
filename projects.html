@@ -83,7 +83,7 @@
             <i class="fas fa-graduation-cap"></i><span>Multiscale Functional and Molecular Imaging Lab, D-MAVT, ETH Zurich</span>
           </div>
           <div class="contact-item"><i class="fas fa-calendar-alt"></i><span>07.2025--Present</span></div>
-          <div class="contact-item"><i class="fas fa-user"></i><span> Advisors: <a href="https://www.razanskylab.org/members">Dr. Luis Deán-Ben</a>, <a href="https://www.razanskylab.org/members">Prof. Daniel Razansky</a>
+          <div class="contact-item"><i class="fas fa-user"></i><span> Advisors: <a href="https://www.razanskylab.org/members">Dr. Luis Deán-Ben</a>
 </span></div>
           <div class="project-row">
             <ul>
@@ -95,6 +95,9 @@
             <!-- <div class="project-images">
               <img src="images/OAT.jpg" alt="Basic Workflow" onclick="openModal(this)">
             </div> -->
+            <div class="project-images">
+              <img src='images/Master_Thesis.jpg' alt='Workflow of Physics-Guided, CNN-Regularized Optoacoustic Image Reconstruction' onclick="openModal(this)">
+            </div>
           </div>
         </section>
 
@@ -121,13 +124,29 @@
               <li>Utilized CAD modeling in Onshape, UV polymerization setup, and optical imaging techniques for characterization.</li>
             </ul>
           <div class="project-images-grid">
-            <img src="images/cuff_electrode.png" alt="Bilayer Cuff Electrode Sample"    onclick="openModal(this)" >
-            <img src="images/cuff_electrode_patch.png" alt="Cuff Electrode with Patches"    onclick="openModal(this)">
-            <img src="images/micro_CT.jpg" alt="Cuff Eletrode under MicroCT"    onclick="openModal(this)">
-            <img src="images/cuff_electrode_test_setup.jpg" alt="Test Setup"    onclick="openModal(this)">
             <img src="images/Self_Locking_Illustration.jpg" alt="Thermally triggered self-locking mechanism of a bilayer hydrogel cuff (modeled in Blender)"    onclick="openModal(this)">
-            <img src="images/Flow Control.png" alt="Cetoni Flow Control"    onclick="openModal(this)">         
+            <img src="images/Flow Control.png" alt="Cetoni Flow Control"    onclick="openModal(this)">   
+            <img src="images/DLP.jpg" alt="DLP Based EVA printer"    onclick="openModal(this)">   
+            <img src="images/fabracation.jpg" alt="Fabrication of Bilayer Hydrogels"    onclick="openModal(this)">   
+            <img src="images/Bending Curvature of Samples with Same PEGDA Thickness & Varied PNIPAM Thickness.jpg" alt="Bending Curvature of Samples with Same PEGDA Thickness & Varied PNIPAM Thickness"    onclick="openModal(this)">
+            <img src="images/cuff_electrode_test_setup.jpg" alt="Cuff Electrode Attachment Test Setup"    onclick="openModal(this)">
+            <img src="images/micro_CT.jpg" alt="Cuff Eletrode under MicroCT"    onclick="openModal(this)">
+            <img src="images/Samples.jpg" alt="Different Samples"    onclick="openModal(this)">
+            
+            
+      
+               
+
+            <div class="video-item" onclick="openVideoModal('videos/test.mp4')">
+              <video muted>
+                <source src="videos/test.mp4" type="Video/mp4" alt="Cuff Electrode Attachment Test Setup">
+              </video>
+            </div>
+
+
           </div>
+
+ 
 
  
           </div>
@@ -238,9 +257,22 @@
 
 
 <!-- Lightbox Modal -->
-<div id="imgModal" class="img-modal" onclick="closeModal()">
+<!-- <div id="imgModal" class="img-modal" onclick="closeModal()">
   <span class="close">&times;</span>
   <img class="modal-content" id="modalImg">
+  <div id="caption"></div>
+</div> -->
+<div id="imgModal" class="img-modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+
+  <!-- 图片 -->
+  <img class="modal-content" id="modalImg">
+
+  <!-- 视频 -->
+  <video class="modal-video" id="modalVideo" controls>
+    <source id="modalVideoSrc" src="" type="video/mp4">
+  </video>
+
   <div id="caption"></div>
 </div>
 

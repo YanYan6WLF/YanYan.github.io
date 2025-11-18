@@ -559,6 +559,32 @@ footer a:hover {
 }
 
 
+
+
+
+
+
+
+.project-images-grid .video-item {
+  width: 100%;
+  height: auto;
+}
+
+.project-images-grid .video-item video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.modal-video {
+  display: none;
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 10px;
+}
+
+
 /* ---------- 响应式布局（移动端优化） ---------- */
 @media (max-width: 768px) {
   .project-row {

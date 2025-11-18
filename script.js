@@ -70,3 +70,72 @@ function openModal(img) {
 function closeModal() {
   document.getElementById("imgModal").style.display = "none";
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function openVideoModal(src) {
+  var modal = document.getElementById("imgModal");
+  var modalImg = document.getElementById("modalImg");
+
+  modal.style.display = "block";
+  modalImg.outerHTML = `<video id="modalImg" controls style="max-width:90%; max-height:85vh;">
+                           <source src="${src}" type="video/mp4">
+                        </video>`;
+}
+
+
+function openModal(img) {
+  document.getElementById("imgModal").style.display = "block";
+  
+  // 显示图片
+  document.getElementById("modalImg").style.display = "block";
+  document.getElementById("modalImg").src = img.src;
+
+  // 隐藏视频
+  document.getElementById("modalVideo").style.display = "none";
+  document.getElementById("modalVideo").pause();
+
+  document.getElementById("caption").innerHTML = img.alt;
+}
+
+function openVideoModal(src) {
+  const modal = document.getElementById("imgModal");
+  modal.style.display = "block";
+
+  // 隐藏图片
+  document.getElementById("modalImg").style.display = "none";
+
+  // 显示视频
+  const video = document.getElementById("modalVideo");
+  const videoSrc = document.getElementById("modalVideoSrc");
+  videoSrc.src = src;
+  video.load();  // 刷新视频
+  video.style.display = "block";
+
+  document.getElementById("caption").innerHTML = "";
+}
+
+
+
+function closeModal() {
+  document.getElementById("imgModal").style.display = "none";
+
+  // 停止视频
+  const video = document.getElementById("modalVideo");
+  video.pause();
+  video.currentTime = 0;
+}
