@@ -87,27 +87,20 @@
 </span></div>
           <div class="project-row">
             <ul>
-              <li>Designed a FISTA-inspired reconstruction algorithm for optoacoustic tomography (OAT), where each iteration combines:</li>
-                <ul>
-                  <li>Nesterov acceleration used to speed up convergence</li>
-                  <li>Shared CNN-based self-learned regularizer applied at every iteration</li>
-                  <li>Physics-informed data consistency term</li>
-                </ul>
-              <li>Building and training the self-learned CNN regularizer using:</li>
-                <ul>
-                  <li>Weighted dual-speed-of-sound (2SoS) back-projection reconstructions and the first ten 2SoS LSQR reconstruction iterations as inputs</li>
-                  <li>Vesselness-enhanced (Frangi, Jerman filters, etc.) images as structural ground truth</li>
-                </ul>
-              <li>Will conduct testing and validation across independent OAT acquisitions.</li>
-              <li>May additionally engage in phantom data acquisition, depending on project timeline and availability.</li>
+              <li>Reconstructed optoacoustic images using filtered back-projection (FBP) and LSQR algorithms with dual speed-of-
+sound (2SoS) modeling and scattering weighting</li>
+              <li>Improved 2D and 3D image quality and vessel enhancement using Hessian-based filters (Frangi, Jerman), gradient
+vector field (GVF), and U-Net</li>
+              <li>Modified a FISTA-inspired iterative reconstruction algorithm for 2D optoacoustic imaging to improve
+reconstruction quality by integrating:</li>
+              <ul>
+                <li>Nesterov acceleration for faster convergence</li>
+                <li>A shared CNN-based self-learned regularizer applied at each iteration</li>
+                <li>A physics-informed data-consistency term</li>
+              </ul>
+     
             </ul>
-            <!-- <div class="project-images">
-              <img src="images/OAT.jpg" alt="Basic Workflow" onclick="openModal(this)">
-            </div> -->
-            <div class="project-images">
-              <img src='images/Master_Thesis.jpg' alt='Workflow of Physics-Guided, CNN-Regularized Optoacoustic Image Reconstruction' onclick="openModal(this)">
-            </div>
-          </div>
+    
         </section>
 
 
