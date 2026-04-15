@@ -87,18 +87,16 @@
 </span></div>
           <div class="project-row">
             <ul>
-              <li>Reconstructed optoacoustic images using filtered back-projection (FBP) and LSQR algorithms with dual speed-of-
-sound (2SoS) modeling and scattering weighting</li>
-              <li>Improved 2D and 3D image quality and vessel enhancement using Hessian-based filters (Frangi, Jerman), gradient
-vector field (GVF), and U-Net</li>
-              <li>Modified a FISTA-inspired iterative reconstruction algorithm for 2D optoacoustic imaging to improve
-reconstruction quality by integrating:</li>
-              <ul>
-                <li>Nesterov acceleration for faster convergence</li>
-                <li>A shared CNN-based self-learned regularizer applied at each iteration</li>
-                <li>A physics-informed data-consistency term</li>
-              </ul>
-     
+              <li>Developed an optoacoustic image reconstruction pipeline based on existing methods, integrating dual-speed-of-
+sound weighted back-projection (FBP) and heterogeneous LSQR reconstruction.</li>
+              <li>Implemented and systematically evaluated multiple vessel enhancement methods (e.g., Frangi, Jerman), analyzing
+their performance in terms of vessel continuity, branching structures, noise suppression, and robustness.</li>
+              <li>Built a U-Net-based post-processing pipeline using weighted BP and early LSQR iterations as multi-channel inputs to improve structural consistency and suppress background artifacts.</li>
+              <li>Adapted and implemented FISTA-Net for optoacoustic inverse problems, integrating data consistency and designing a structure-aware loss function based on classic reconstructions and vesselness-enhanced images, enabling physics-guided reconstruction with enhanced vascular structure representation.</li>
+              <li>Established a comprehensive experimental and evaluation framework to compare physics-based, post-processing, and learning-based approaches in terms of vascular structure preservation and enhancement.</li>
+
+
+
             </ul>
     
         </section>
