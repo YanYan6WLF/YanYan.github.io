@@ -8,98 +8,45 @@ body {
   background: #fff;
   color: #333;
   transition: background-color 0.6s ease, color 0.6s ease;
-  line-height: 1.6; /*设置行距，提升可读性*/
-  padding-top: 70px; /* 给顶部留空间，防止被导航栏挡住 */
-
+  line-height: 1.6;
+  padding-top: 70px;
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto; /*上下边距为 0，左右自动，达到水平居中*/
-  padding: 0 1.5rem; /*左右各留 1.5rem 内边距*/
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
-/* nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem 0;
-    border-bottom: 1px solid #eee;
-    font-weight: 500;
-    flex-wrap: wrap;
-    gap: 12rem;
-
-     
-}
-
-.nav-brand {
-  font-size: 2.4rem;
-  font-weight: bold;
-  color: #333;
-  white-space: nowrap;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  flex-shrink: 1;
-  min-width: 0;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #333;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
-}
-
-.nav-links a.active {
-  color: pink;
-  border-bottom: 2px solid powderblue;
-  font-weight: bold;
-} */
-
-
-
-
-
-
-/* 导航栏整体 */
+/* ===== Fixed nav: removed undefined --background-color variable ===== */
 nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: var(--background-color, white);
+  background-color: white; /* was: var(--background-color, white) — variable never defined */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 0.6rem 0; /* 导航栏上下间距 */
+  padding: 0.6rem 0;
 }
 
-/* 内部居中容器（和 .container 对齐） */
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem; /* 左右留白 */
+  padding: 0 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* 品牌名 */
 .nav-brand {
   font-size: 2rem;
   font-weight: bold;
   color: #333;
-  margin-right: 3rem; /* 与导航链接保持距离 */
+  margin-right: 3rem;
   white-space: nowrap;
 }
 
-/* 导航链接部分 */
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -122,7 +69,6 @@ nav {
   font-weight: bold;
 }
 
-/* 深色模式适配 */
 .dark-mode nav {
   background-color: #1e1e1e;
 }
@@ -131,17 +77,6 @@ nav {
 .dark-mode .nav-brand {
   color: #ccc;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 .toggle-btn {
   margin-left: auto;
@@ -158,15 +93,16 @@ nav {
   flex-shrink: 0;
 }
 
-/* ===== 🌙 改进版暗色模式视觉优化 ===== */
+/* ===== Dark mode — single consolidated block ===== */
+/* (Previously split into two conflicting blocks; merged here) */
 .dark-mode {
-  background-color: #121212;  /* 深色背景 */
-  color: #e0e0e0;             /* 主文字提亮 */
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
 .dark-mode nav {
   background-color: #1f1f1f;
-  box-shadow: 0 2px 8px rgba(255,255,255,0.05);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
 }
 
 .dark-mode .nav-brand,
@@ -175,14 +111,13 @@ nav {
 .dark-mode aside h2,
 .dark-mode aside p,
 .dark-mode aside a {
-  color: #ddd; /* 提亮侧栏文字 */
+  color: #ddd;
 }
 
 .dark-mode .contact-item i {
   color: #bbb;
 }
 
-/* 链接更柔和、更清晰 */
 .dark-mode a {
   color: #80bfff;
   text-decoration: none;
@@ -193,24 +128,20 @@ nav {
   text-decoration: underline;
 }
 
-/* 左栏底色与阴影 */
 .dark-mode aside {
   background: #1a1a1a;
-  box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
 }
 
-/* hover 时的浅蓝高亮 */
 .dark-mode .contact-item:hover {
   color: #66b3ff;
 }
 
-/* 暗色模式下的图片标题 */
 .dark-mode figcaption,
 .dark-mode #caption {
   color: #ccc;
 }
 
-/* 暗色 footer */
 .dark-mode footer {
   border-top: 1px solid #333;
   color: #aaa;
@@ -224,44 +155,36 @@ nav {
   color: #aad4ff;
 }
 
-/* 左栏头像适配暗色背景 */
 .dark-mode .profile img {
   border-color: #444;
-  box-shadow: 0 0 10px rgba(255,255,255,0.08);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.08);
 }
 
+.dark-mode .toggle-btn {
+  color: #ccc;
+  border-color: #666;
+}
 
-
-
-
+/* ===== Layout ===== */
 main {
   display: flex;
   padding: 3rem 0;
 }
 
 aside {
-      flex: 0 0 250px;
-      margin-right: 2rem;
-      top: 2rem;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      padding: 1.5rem;
+  flex: 0 0 250px;
+  margin-right: 2rem;
+  top: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
 
-    }
 .sticky-container {
   position: sticky;
   top: 2rem;
 }
-
-
-
-
-
-
-
-
-
 
 aside img {
   width: 100%;
@@ -344,9 +267,6 @@ aside a {
   opacity: 1;
 }
 
-
-
-
 footer {
   text-align: center;
   font-size: 0.9em;
@@ -363,24 +283,6 @@ footer a {
 
 footer a:hover {
   color: #0077cc;
-}
-
-.dark-mode {
-  background-color: #1e1e1e;
-  color: #ccc;
-}
-
-.dark-mode .nav-links a,
-.dark-mode .nav-brand,
-.dark-mode .contact-item,
-.dark-mode aside h2,
-.dark-mode aside p {
-  color: #ccc;
-}
-
-.dark-mode .toggle-btn {
-  color: #ccc;
-  border-color: #666;
 }
 
 .menu-btn, .aside-toggle-btn {
@@ -441,21 +343,20 @@ footer a:hover {
     width: 80px;
     height: 80px;
   }
-
 }
-
-
 
 /* ===== Project Section Layout ===== */
 .project-row {
   display: flex;
-  align-items: flex-start;  /* ✅ 顶部对齐，避免图上下漂浮 */
+  align-items: flex-start;
   justify-content: space-between;
   gap: 2rem;
-  margin-bottom: 2.5rem;   /* ✅ 增加与下方横图的间距 */
+  margin-bottom: 2.5rem;
 }
 
-/* ---------- 通用图片样式（所有项目图共享） ---------- */
+/* ===== Fixed: was invalid bare text "---------- 单张右侧竖直图 ----------" ===== */
+
+/* Generic image styles shared by all project figures */
 .project-images img,
 .side-figure img,
 .bottom-figure img {
@@ -472,7 +373,7 @@ footer a:hover {
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* ---------- 右侧图片列（用于上下两张小图） ---------- */
+/* Right-side image column (stacked pair) */
 .project-images {
   display: flex;
   flex-direction: column;
@@ -492,11 +393,11 @@ footer a:hover {
   line-height: 1.3;
 }
 
----------- 单张右侧竖直图 ----------
+/* Single right-side portrait figure */
 .side-figure {
   text-align: center;
   flex-shrink: 0;
-  margin: 0; /* 去除默认外边距 */
+  margin: 0;
 }
 
 .side-figure img {
@@ -510,37 +411,12 @@ footer a:hover {
   line-height: 1.3;
 }
 
-/* ---------- 文字下方横向图 ----------
-.bottom-figure {
-  text-align: center;
-  margin: 0 auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.bottom-figure img {
-  width: 90%;
-  max-width: 750px;
-}
-
-.bottom-figure figcaption {
-  font-size: 0.85em;
-  color: #666;
-  margin-top: 0.6rem;
-  line-height: 1.3;
-}
-.project-figure-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.8rem;
-} */
-
+/* 2-column image grid */
 .project-images-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);  /* 两列 */
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
-  width: 400px;   /* ← 原来280太窄了，这里改大一点 */
+  width: 400px;
   margin-left: 20px;
 }
 
@@ -558,13 +434,6 @@ footer a:hover {
   transform: scale(1.04);
 }
 
-
-
-
-
-
-
-
 .project-images-grid .video-item {
   width: 100%;
   height: auto;
@@ -574,7 +443,7 @@ footer a:hover {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .modal-video {
@@ -584,8 +453,6 @@ footer a:hover {
   border-radius: 10px;
 }
 
-
-/* ---------- 响应式布局（移动端优化） ---------- */
 @media (max-width: 768px) {
   .project-row {
     flex-direction: column;
@@ -603,11 +470,9 @@ footer a:hover {
   }
 }
 
-
-
-/* ===== 图片放大模态框 ===== */
+/* ===== Image lightbox modal ===== */
 .img-modal {
-  display: none; /* 默认隐藏 */
+  display: none;
   position: fixed;
   z-index: 2000;
   padding-top: 60px;
@@ -616,10 +481,9 @@ footer a:hover {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.85);
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
-/* 放大的图像 */
 .img-modal img.modal-content {
   margin: auto;
   display: block;
@@ -628,7 +492,6 @@ footer a:hover {
   border-radius: 10px;
 }
 
-/* 图片标题 */
 #caption {
   text-align: center;
   color: #ccc;
@@ -636,7 +499,6 @@ footer a:hover {
   margin-top: 8px;
 }
 
-/* 关闭按钮 */
 .img-modal .close {
   position: absolute;
   top: 20px;
@@ -657,18 +519,11 @@ footer a:hover {
 }
 
 @keyframes zoom {
-  from {transform: scale(0.6);}
-  to {transform: scale(1);}
+  from { transform: scale(0.6); }
+  to   { transform: scale(1); }
 }
 
-
-
-
-
-
-/* --- Light mode --- */
-/* 在 CSS 中，“后定义的样式会覆盖前面相同选择器的样式”（即后者优先级更高），
-所以放在最后，可以确保它覆盖掉浏览器默认蓝紫色链接，同时不影响其他样式 */
+/* ===== Links ===== */
 a {
   color: #0077cc;
   text-decoration: none;
@@ -680,7 +535,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* --- Dark mode (你已有的) --- */
 .dark-mode a {
   color: #80bfff;
 }
@@ -688,3 +542,6 @@ a:hover {
 .dark-mode a:hover {
   color: #aad4ff;
 }
+
+
+

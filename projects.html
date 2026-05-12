@@ -82,22 +82,25 @@
           <div class="contact-item">
             <i class="fas fa-graduation-cap"></i><span>Multiscale Functional and Molecular Imaging Lab, ETH Zurich</span>
           </div>
-          <div class="contact-item"><i class="fas fa-calendar-alt"></i><span>09.2025--Present</span></div>
-          <div class="contact-item"><i class="fas fa-user"></i><span> Advisors: <a href="https://www.razanskylab.org/members">Dr. Luis Deán-Ben</a>
+          <div class="contact-item"><i class="fas fa-calendar-alt"></i><span>09.2025--05.2026</span></div>
+          <div class="contact-item"><i class="fas fa-user"></i><span> Advisors: <a href="https://www.razanskylab.org/members">Dr. Luis Deán-Ben and Prof. Dr. Daniel Razansky</a>
 </span></div>
           <div class="project-row">
+           
             <ul>
-              <li>Developed an optoacoustic image reconstruction pipeline based on existing methods, integrating dual-speed-of-
-sound weighted back-projection (FBP) and heterogeneous LSQR reconstruction.</li>
-              <li>Implemented and systematically evaluated multiple vessel enhancement methods (e.g., Frangi, Jerman), analyzing
-their performance in terms of vessel continuity, branching structures, noise suppression, and robustness.</li>
-              <li>Built a U-Net-based post-processing pipeline using weighted BP and early LSQR iterations as multi-channel inputs to improve structural consistency and suppress background artifacts.</li>
-              <li>Adapted and implemented FISTA-Net for optoacoustic inverse problems, integrating data consistency and designing a structure-aware loss function based on classic reconstructions and vesselness-enhanced images, enabling physics-guided reconstruction with enhanced vascular structure representation.</li>
-              <li>Established a comprehensive experimental and evaluation framework to compare physics-based, post-processing, and learning-based approaches in terms of vascular structure preservation and enhancement.</li>
-
-
-
+              <li>Investigated limited-view optoacoustic tomography (OAT) reconstruction under real-data conditions involving acoustic heterogeneity, signal scattering, and incomplete angular sampling.</li>
+              <li>Implemented filtered back-projection (FBP) reconstruction with heterogeneous speed-of-sound correction and geometry-based signal scattering weighting, and analyzed the spatial influence of acoustic heterogeneity using local Quality Index (QI) evaluation.</li>
+              <li>Adapted the FISTA-Net deep unrolling framework for limited-view OAT reconstruction by preserving explicit forward-operator-based data consistency, removing non-negativity constraints, and introducing SSIM-based structural similarity losses.</li>
+              <li>Quantitative evaluation using PSNR, SSIM, and RMSE demonstrated consistent improvements over limited-view FBP baselines, with incorporation of an SSIM-based loss term further improving image quality.</li>
+              <li>Evaluated Hessian-based filters, including Frangi and Jerman filters, and developed a U-Net post-processing network with vesselness-enhanced proxy supervision.</li>
             </ul>
+            <div class="project-images">
+              <img src="images/128.png" alt="Representative Reconstruction Results for 128ch Acquisition"    onclick="openModal(this)">
+              <img src="images/64.png" alt="Representative Reconstruction Results for 64ch Acquisition"    onclick="openModal(this)">   
+            </div>
+
+
+          </div>
     
         </section>
 
@@ -116,12 +119,11 @@ their performance in terms of vessel continuity, branching structures, noise sup
 
           <div class="project-row">
             <ul>
-              <li>Determined and optimized PEGDA/PNIPAM hydrogel formulations for DLP-based 3D printing</li>
-              <li>Fabricated PDMS pool chambers via PDMS spin-coating and oxygen-plasma treatment for hydrogel photocuring</li>
-              <li>Designed printing patterns on AutoCAD and printed thermally stimulated PNIPAM/PEGDA bilayer hydrogel cuff electrodes</li>
-              <li>Controlled thermally induced curvature deformation through structural design optimization</li>
-              <li>Designed and 3D-printed nerve fixation and sealing connectors in Onshape to construct a microfluidic channel for evaluating cuff-electrode attachment under programmed flow conditions mimicking in vivo environments.</li>
-              <li>Utilized micro-CT and optical imaging techniques for structural and morphological characterization.</li>
+              <li>Designed and optimized PEGDA/PNIPAM hydrogel formulations for DLP-based 3D printing.</li>
+              <li>Fabricated thermos-responsive bilayer hydrogel structures and controlled curvature deformation through material composition and structural design.</li>
+              <li>Developed hydrogel-based cuff electrode prototypes for neuromodulation applications, with potential integration of functional nanoparticles.</li>
+              <li>Built experimental platforms including 3D-printed connectors and fluidic systems to evaluate device performance under controlled flow conditions mimicking in vivo environments.</li>
+              <li>Performed structural and morphological characterization using micro-CT and optical microscopy.</li>
             </ul>
           <div class="project-images-grid">
             <img src="images/locking.jpg" alt="Thermally triggered self-locking mechanism of a bilayer hydrogel cuff (modeled in Blender)"    onclick="openModal(this)">
