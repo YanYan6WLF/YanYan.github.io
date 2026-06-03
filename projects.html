@@ -78,21 +78,26 @@
         </section>
     
         <section>
-          <h3 style="color:#1a8f67;"> Master Thesis: Hybrid Deep Learning and Physics-Based Framework for Automated Optoacoustic Image Processing</h3>
+          <h3 style="color:#1a8f67;"> Master Thesis: Physics-Based Deep Learning for Optoacoustic Tomography Reconstruction</h3>
           <div class="contact-item">
             <i class="fas fa-graduation-cap"></i><span>Multiscale Functional and Molecular Imaging Lab, ETH Zurich</span>
           </div>
           <div class="contact-item"><i class="fas fa-calendar-alt"></i><span>09.2025--05.2026</span></div>
-          <div class="contact-item"><i class="fas fa-user"></i><span> Advisors: <a href="https://www.razanskylab.org/members">Dr. Luis Deán-Ben and Prof. Dr. Daniel Razansky</a>
+          <div class="contact-item"><i class="fas fa-user"></i><span> Supervisors: <a href="https://www.razanskylab.org/members">Prof. Dr. Daniel Razansky and Dr. Xose Luis Dean-Ben</a>
+          
 </span></div>
           <div class="project-row">
            
             <ul>
-              <li>Investigated limited-view optoacoustic tomography (OAT) reconstruction under real-data conditions involving acoustic heterogeneity, signal scattering, and incomplete angular sampling.</li>
-              <li>Implemented filtered back-projection (FBP) reconstruction with heterogeneous speed-of-sound correction and geometry-based signal scattering weighting, and analyzed the spatial influence of acoustic heterogeneity using local Quality Index (QI) evaluation.</li>
-              <li>Adapted the FISTA-Net deep unrolling framework for limited-view OAT reconstruction by preserving explicit forward-operator-based data consistency, removing non-negativity constraints, and introducing SSIM-based structural similarity losses.</li>
-              <li>Quantitative evaluation using PSNR, SSIM, and RMSE demonstrated consistent improvements over limited-view FBP baselines, with incorporation of an SSIM-based loss term further improving image quality.</li>
-              <li>Evaluated Hessian-based filters, including Frangi and Jerman filters, and developed a U-Net post-processing network with vesselness-enhanced proxy supervision.</li>
+              <li>Reconstructed approximately 600 optoacoustic tomography (OAT) slice images from six mice using filtered back-projection (FBP) and model-based LSQR reconstruction, incorporating heterogeneous speed-of-sound (SoS)modeling and scattering weighting algorithm.</li>
+              <li>Adapted the FISTA-Net deep unrolling framework for sparse-view and limited-view OAT reconstruction by
+                  preserving explicit forward-model-based data fidelity, removing non-negativity constraints, and incorporating an
+                  SSIM-based loss term, enabling the network to learn an implicit data-driven regularization prior for complex
+                  biological structures.</li>
+              <li>Performed quantitative evaluation using PSNR, SSIM, and RMSE, demonstrating consistent improvements over
+                  sparse-view FBP baselines as the number of uniformly sampled detector channels increased, while observing that
+                  limited-view reconstruction remained challenging due to structural information loss from missing angular coverage.</li>
+              <li>Evaluated Hessian-based filters (including Frangi and Jerman filters), Weingarten and GVF-based filters, and developed a U-Net post-processing network with vesselness-enhanced supervision.</li>
             </ul>
             <div class="project-images">
               <img src="images/128.png" alt="Representative Reconstruction Results for 128ch Acquisition"    onclick="openModal(this)">
@@ -113,16 +118,16 @@
             <i class="fas fa-graduation-cap"></i><span>Multi-Scale Robotics Laboratory, D-MAVT, ETH Zurich </span>
           </div>
           <div class="contact-item"><i class="fas fa-calendar-alt"></i><span>10.2024--07.2025</span></div>
-          <div class="contact-item"><i class="fas fa-user"></i><span>Advisors: <a href='https://msrl.ethz.ch/the-lab/team/hc_details.html'>Huimin Chen</a>, <a href='https://msrl.ethz.ch/the-lab/team/SevimSemih.html'>Dr. Semih Sevim</a>, <a href='https://msrl.ethz.ch/the-lab/team/sp_details.html'>Prof. Salvador Pané i Vidal</a> </span></div>
-          <div class="contact-item"><i class="fas fa-file-alt"></i><span><a href="https://docs.google.com/presentation/d/1029L6XBwTc5x4cPZHU-ugoLyp28_wYrD/edit?usp=sharing&ouid=111747600811758710011&rtpof=true&sd=true" ><strong>Presentation</strong></a>;    <a href="https://drive.google.com/file/d/1rubQOi4qpbPsbKzWZBBPDtW440N2j6Yw/view?usp=sharing"><strong>Report</strong></a></span></div>
+          <div class="contact-item"><i class="fas fa-user"></i><span>Supervisors: <a href='https://msrl.ethz.ch/the-lab/team/sp_details.html'>Prof.Dr.Salvador Pané i Vidal</a> , <a href='https://msrl.ethz.ch/the-lab/team/SevimSemih.html'>Dr. Semih Sevim</a>, and <a href='https://msrl.ethz.ch/the-lab/team/hc_details.html'>Huimin Chen</a></span></div>
+          <!-- <div class="contact-item"><i class="fas fa-file-alt"></i><span><a href="https://docs.google.com/presentation/d/1029L6XBwTc5x4cPZHU-ugoLyp28_wYrD/edit?usp=sharing&ouid=111747600811758710011&rtpof=true&sd=true" ><strong>Presentation</strong></a>;    <a href="https://drive.google.com/file/d/1rubQOi4qpbPsbKzWZBBPDtW440N2j6Yw/view?usp=sharing"><strong>Report</strong></a></span></div> -->
           
 
           <div class="project-row">
             <ul>
               <li>Designed and optimized PEGDA/PNIPAM hydrogel formulations for DLP-based 3D printing.</li>
-              <li>Fabricated thermos-responsive bilayer hydrogel structures and controlled curvature deformation through material composition and structural design.</li>
-              <li>Developed hydrogel-based cuff electrode prototypes for neuromodulation applications, with potential integration of functional nanoparticles.</li>
-              <li>Built experimental platforms including 3D-printed connectors and fluidic systems to evaluate device performance under controlled flow conditions mimicking in vivo environments.</li>
+              <li>Fabricated thermoresponsive bilayer hydrogel structures with tunable curvature by controlling printed layer thickness and bilayer geometry.</li>
+              <li>Developed hydrogel-based cuff electrode prototypes for future neuromodulation applications, with potential integration of functional nanoparticles for magnetic-field-responsive electrical stimulation.</li>
+              <li>Built experimental platforms, including 3D-printed connectors and fluidic systems, to evaluate device performance under controlled flow conditions mimicking in vivo environments.</li>
               <li>Performed structural and morphological characterization using micro-CT and optical microscopy.</li>
             </ul>
           <div class="project-images-grid">
@@ -162,7 +167,7 @@
             <span>Bio-Inspired Robots for Medicine-Lab, Department of Biomedical Engineering, University Basel</span>
           </div>
           <div class="contact-item"><i class="fas fa-calendar-alt"></i><span>04.2024--06.2024</span></div>
-          <div class="contact-item"><i class="fas fa-file-alt"></i><span><a href="PDF/applied_control.pdf" >Report</a> </span></div>
+          <!-- <div class="contact-item"><i class="fas fa-file-alt"></i><span><a href="PDF/applied_control.pdf" >Report</a> </span></div> -->
 
 
           <div class="project-row">
@@ -205,7 +210,7 @@
         <section>
           <h3 style="color:#1a8f67;">Course Project:  Phone Tracking in Homogeneous Magnetic Field </h3>
           <div class="contact-item"><i class="fas fa-calendar-alt"></i><span>03.2024--06.2024</span></div>
-          <div class="contact-item"><i class="fas fa-file-alt"></i><span><a href="PDF/Report_Sensor and Signal Processing_Yan Yan.pdf" >Report</a> </span></div>
+          <!-- <div class="contact-item"><i class="fas fa-file-alt"></i><span><a href="PDF/Report_Sensor and Signal Processing_Yan Yan.pdf" >Report</a> </span></div> -->
 
           <div class="project-row">
             <ul>
@@ -224,7 +229,7 @@
         <section>
           <h3 style="color:#1a8f67;">Course Team Project: Surface and Volume Visualization of MRI Data </h3>
           <div class="contact-item"><i class="fas fa-calendar-alt"></i><span>12.2023</span></div>
-          <div class="contact-item"><i class="fas fa-file-alt"></i><span><a href="PDF/DBE_MIP_Week11_Presentation.pdf" >Report</a> </span></div>
+          <!-- <div class="contact-item"><i class="fas fa-file-alt"></i><span><a href="PDF/DBE_MIP_Week11_Presentation.pdf" >Report</a> </span></div> -->
 
           <div class="project-row">
             <ul>
