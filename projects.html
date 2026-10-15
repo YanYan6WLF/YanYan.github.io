@@ -88,7 +88,7 @@
 </span></div>
           <div class="project-row">
            
-            <ul>
+            <!-- <ul>
               <li>Reconstructed approximately 600 optoacoustic tomography (OAT) slice images from six mice using filtered back-projection (FBP) and model-based LSQR reconstruction, incorporating heterogeneous speed-of-sound (SoS)modeling and scattering weighting algorithm.</li>
               <li>Adapted the FISTA-Net deep unrolling framework for sparse-view and limited-view OAT reconstruction by
                   preserving explicit forward-model-based data fidelity, removing non-negativity constraints, and incorporating an
@@ -98,6 +98,17 @@
                   sparse-view FBP baselines as the number of uniformly sampled detector channels increased, while observing that
                   limited-view reconstruction remained challenging due to structural information loss from missing angular coverage.</li>
               <li>Evaluated Hessian-based filters (including Frangi and Jerman filters), Weingarten and GVF-based filters, and developed a U-Net post-processing network with vesselness-enhanced supervision.</li>
+            </ul> -->
+            <ul>
+              <li>Implemented FBP and model-based LSQR reconstruction for sparse-/limited-view OAT, working with large sparse
+                  system matrices and heterogeneous speed-of-sound modeling.</li>
+              <li>Adapted the FISTA-Net deep unrolling framework for sparse-view and limited-view OAT reconstruction by
+                  combining explicit forward-model-based data fidelity with a CNN-based learned regularizer, enabling the network
+                  to learn an implicit data-driven regularization prior for complex biological structures.</li>
+              <li>Performed quantitative evaluation using PSNR, SSIM, and RMSE, demonstrating consistent improvements over
+                  sparse-view FBP baselines as the number of uniformly sampled detector channels increased, while observing that
+                  limited-view reconstruction remained challenging due to structural information loss from missing angular coverage.</li>
+              <li>Explored multiple vesselness-enhancement strategies, including conventional vesselness filters (Frangi, Jerman, Weingarten and GVF-based filters),and deep learning trained directly on Frangi-filtered target images, to improve vascular structure representation.</li>
             </ul>
             <div class="project-images">
               <img src="images/128.png" alt="Representative Reconstruction Results for 128ch Acquisition"    onclick="openModal(this)">
@@ -124,11 +135,16 @@
 
           <div class="project-row">
             <ul>
-              <li>Designed and optimized PEGDA/PNIPAM hydrogel formulations for DLP-based 3D printing.</li>
-              <li>Fabricated thermoresponsive bilayer hydrogel structures with tunable curvature by controlling printed layer thickness and bilayer geometry.</li>
-              <li>Developed hydrogel-based cuff electrode prototypes for future neuromodulation applications, with potential integration of functional nanoparticles for magnetic-field-responsive electrical stimulation.</li>
-              <li>Built experimental platforms, including 3D-printed connectors and fluidic systems, to evaluate device performance under controlled flow conditions mimicking in vivo environments.</li>
-              <li>Performed structural and morphological characterization using micro-CT and optical microscopy.</li>
+              <li>Optimized PNIPAM/PEGDA hydrogel formulations by balancing thermoresponsive shrinkage with mechanical
+                  integrity for DLP fabrication of responsive bilayer structures.</li>
+              <li>Established a reproducible DLP fabrication workflow by defining the geometry of each hydrogel layer and the
+                  printing sequence between PNIPAM and PEGDA, enabling reliable fabrication of bilayer cuff-electrode prototypes.</li>
+              <li>Systematically tuned cuff curvature by varying the printed layer thickness, demonstrating the potential to
+                  accommodate nerves of different diameters.</li>
+              <li>Built in vitro experimental platforms, including self-designed 3D-printed connectors and programmed fluidic
+                  systems, to evaluate cuff wrapping and stability under controlled flow conditions.</li>
+              <li>Characterized the printed structures using micro-CT and optical microscopy.</li>
+              <li>Future: Integration of functional nanoparticles for magnetic-field-responsive electrical stimulation..</li>
             </ul>
           <div class="project-images-grid">
             <img src="images/locking.jpg" alt="Thermally triggered self-locking mechanism of a bilayer hydrogel cuff (modeled in Blender)"    onclick="openModal(this)">
